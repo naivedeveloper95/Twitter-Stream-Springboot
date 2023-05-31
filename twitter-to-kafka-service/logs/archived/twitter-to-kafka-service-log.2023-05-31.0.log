@@ -1,0 +1,29 @@
+2023-05-31 23:26:59 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication on satyam with PID 10268 (D:\Code\microservices-demo\twitter-to-kafka-service\target\classes started by HP in D:\Code\microservices-demo)
+2023-05-31 23:26:59 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2023-05-31 23:27:00 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.498 seconds (JVM running for 2.532)
+2023-05-31 23:27:00 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
+2023-05-31 23:27:00 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Kafka, Elasticsearch]
+2023-05-31 23:27:00 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Hello microservices!
+2023-05-31 23:27:00 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Kafka, Elasticsearch]
+2023-05-31 23:27:01 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java
+2023-05-31 23:27:01 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-05-31 23:27:01 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:779)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:31)
+Caused by: org.json.JSONException: A JSONObject text must begin with '{' at 3 [character 4 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:521)
+	at org.json.JSONObject.<init>(JSONObject.java:225)
+	at org.json.JSONObject.<init>(JSONObject.java:421)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.getFormattedTweet(TwitterV2StreamHelper.java:224)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:89)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:40)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:39)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:795)
+	... 5 common frames omitted
