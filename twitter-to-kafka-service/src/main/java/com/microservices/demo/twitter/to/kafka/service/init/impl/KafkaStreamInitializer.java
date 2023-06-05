@@ -13,15 +13,14 @@ public class KafkaStreamInitializer implements StreamInitializer {
     private final KafkaConfigData kafkaConfigData;
     private final KafkaAdminClient kafkaAdminClient;
 
-    public KafkaStreamInitializer(KafkaConfigData kafkaConfigData, KafkaAdminClient kafkaAdminClient) {
-        this.kafkaConfigData = kafkaConfigData;
-        this.kafkaAdminClient = kafkaAdminClient;
+    public KafkaStreamInitializer(KafkaConfigData configData, KafkaAdminClient adminClient) {
+        this.kafkaConfigData = configData;
+        this.kafkaAdminClient = adminClient;
     }
 
     @Override
     public void init() {
         kafkaAdminClient.createTopics();
-        kafkaAdminClient.checkSchemaRegistry();
-        LOG.info("Topics with name {} are ready for operations", kafkaConfigData.getTopicName());
+        LOG.info("Topics with name {} is ready for operations!", kafkaConfigData.getTopicNamesToCreate().toArray());
     }
 }

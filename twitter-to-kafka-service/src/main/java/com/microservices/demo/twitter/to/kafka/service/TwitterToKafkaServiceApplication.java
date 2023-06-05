@@ -17,12 +17,9 @@ public class TwitterToKafkaServiceApplication implements CommandLineRunner {
     private final StreamRunner streamRunner;
     private final StreamInitializer streamInitializer;
 
-    public TwitterToKafkaServiceApplication(
-            StreamInitializer streamInitializer,
-            StreamRunner runner
-    ) {
-        this.streamInitializer = streamInitializer;
+    public TwitterToKafkaServiceApplication(StreamRunner runner, StreamInitializer initializer) {
         this.streamRunner = runner;
+        this.streamInitializer = initializer;
     }
 
     public static void main(String[] args) {
