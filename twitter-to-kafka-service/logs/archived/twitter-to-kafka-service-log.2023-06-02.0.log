@@ -1,0 +1,10 @@
+2023-06-02 17:27:15 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication on satyam with PID 6980 (D:\Code\microservices-demo\twitter-to-kafka-service\target\classes started by HP in D:\Code\microservices-demo)
+2023-06-02 17:27:15 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2023-06-02 17:27:16 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.426 seconds (JVM running for 2.145)
+2023-06-02 17:27:16 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
+2023-06-02 17:27:16 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Kafka, Elasticsearch]
+2023-06-02 17:27:16 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Hello microservices!
+2023-06-02 17:27:16 [main] INFO  c.m.d.t.t.k.s.r.i.MockKafkaStreamRunner - Starting to mock twitter stream for keywords Java
+2023-06-02 17:27:16 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text dolor sed consectetur sit sit
+2023-06-02 17:27:26 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text aliqua dolore consectetur Lorem ut
+2023-06-02 17:27:36 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text sit dolor
