@@ -24,11 +24,17 @@ import java.util.stream.Collectors;
 
 @Component
 public class KafkaAdminClient {
+
     private static final Logger LOG = LoggerFactory.getLogger(KafkaAdminClient.class);
+
     private final KafkaConfigData kafkaConfigData;
+
     private final RetryConfigData retryConfigData;
+
     private final AdminClient adminClient;
+
     private final RetryTemplate retryTemplate;
+
     private final WebClient webClient;
 
 
@@ -96,6 +102,7 @@ public class KafkaAdminClient {
         }
     }
 
+
     private void sleep(Long sleepTimeMs) {
         try {
             Thread.sleep(sleepTimeMs);
@@ -148,4 +155,5 @@ public class KafkaAdminClient {
         }
         return topics;
     }
+
 }

@@ -12,6 +12,7 @@ import java.util.Map;
 @EnableRetry
 @Configuration
 public class KafkaAdminConfig {
+
     private final KafkaConfigData kafkaConfigData;
 
     public KafkaAdminConfig(KafkaConfigData configData) {

@@ -23,10 +23,15 @@ import java.util.concurrent.ThreadLocalRandom;
 @Component
 @ConditionalOnProperty(name = "twitter-to-kafka-service.enable-mock-tweets", havingValue = "true")
 public class MockKafkaStreamRunner implements StreamRunner {
+
     private static final Logger LOG = LoggerFactory.getLogger(MockKafkaStreamRunner.class);
+
     private final TwitterToKafkaServiceConfigData twitterToKafkaServiceConfigData;
+
     private final TwitterKafkaStatusListener twitterKafkaStatusListener;
+
     private static final Random RANDOM = new Random();
+
     private static final String[] WORDS = new String[]{
             "Lorem",
             "ipsum",
@@ -134,4 +139,5 @@ public class MockKafkaStreamRunner implements StreamRunner {
         }
         return tweet.toString().trim();
     }
+
 }

@@ -6,6 +6,7 @@ import twitter4j.Status;
 
 @Component
 public class TwitterStatusToAvroTransformer {
+
     public TwitterAvroModel getTwitterAvroModelFromStatus(Status status) {
         return TwitterAvroModel
                 .newBuilder()

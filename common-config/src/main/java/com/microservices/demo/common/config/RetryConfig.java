@@ -9,7 +9,9 @@ import org.springframework.retry.support.RetryTemplate;
 
 @Configuration
 public class RetryConfig {
+
     private RetryConfigData retryConfigData;
+
     public RetryConfig(RetryConfigData configData) {
         this.retryConfigData = configData;
     }
@@ -29,6 +31,7 @@ public class RetryConfig {
         simpleRetryPolicy.setMaxAttempts(retryConfigData.getMaxAttempts());
 
         retryTemplate.setRetryPolicy(simpleRetryPolicy);
+
         return retryTemplate;
     }
 }
